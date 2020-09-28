@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Marca_Smartphone">
+
+        <item>Iphone</item>
+        <item>Samsung</item>
+        <item>Huawei</item>
+        <item>Motorola</item>
+        <item>LG</item>
+        <item>Xiaomi</item>
+        <item>Nokia</item>
+    </string-array>
+</resources>
