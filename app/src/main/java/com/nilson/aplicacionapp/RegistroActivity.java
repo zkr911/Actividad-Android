@@ -17,6 +17,8 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 public class RegistroActivity extends AppCompatActivity {
 
@@ -216,22 +218,38 @@ public class RegistroActivity extends AppCompatActivity {
              String genero = rbselect.getText().toString();
 
 
-             float rating = ratingBar.getRating();
+             float rating =  ratingBar.getRating();
+             String ratin = Float.valueOf(rating).toString();
 
 
 
             boolean check1 = cbentel.isChecked();
+            String entel = Boolean.valueOf(check1).toString();
 
             boolean check2 = cbclaro.isChecked();
+            String claro = Boolean.valueOf(check2).toString();
+
             boolean check3 = cbmovistar.isChecked();
+            String movistar = Boolean.valueOf(check3).toString();
+
 
             Spinner myspin = (Spinner)findViewById(R.id.spinnerxml);
             String selectspin = myspin.getSelectedItem().toString();
 
-             Toast.makeText(RegistroActivity.this,"---> "+selectspin+"------>"+check2+"----->"+check3,Toast.LENGTH_LONG).show();
+             Toast.makeText(RegistroActivity.this,"---> "+ratin+"------>"+check2+"----->"+check3,Toast.LENGTH_LONG).show();
 
 
+             ArrayList<String> datos=new ArrayList<>();
 
+             datos.add(nombre);
+             datos.add(apellido);
+             datos.add(correo);
+             datos.add(genero);
+             datos.add(entel);
+             datos.add(claro);
+             datos.add(movistar);
+             datos.add(selectspin);
+             datos.add(ratin);
 
 
          }
