@@ -19,23 +19,23 @@
         tools:layout_constraintStart_toStartOf="parent"
         tools:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textoapellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="69dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textonombre"
+        app:layout_constraintStart_toEndOf="@+id/textonombre"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintStart_toStartOf="parent"
         tools:layout_constraintTop_toBottomOf="@+id/textonombre" />
 
-
     <TextView
         android:id="@+id/textocorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="17dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="11dp"
         android:text="TextView"
@@ -45,8 +45,8 @@
 
     <TextView
         android:id="@+id/textogenero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="113dp"
+        android:layout_height="20dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="17dp"
         android:text="TextView"
@@ -55,50 +55,50 @@
 
     <TextView
         android:id="@+id/textoclaro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="27dp"
+        android:layout_width="112dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textogenero" />
 
     <TextView
         android:id="@+id/textomovistar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
+        android:layout_width="113dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoclaro" />
 
     <TextView
         android:id="@+id/textoentel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="31dp"
+        android:layout_width="110dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textomovistar" />
 
     <TextView
         android:id="@+id/textospin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="109dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoentel" />
 
     <TextView
         android:id="@+id/textoratin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="72dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textospin" />

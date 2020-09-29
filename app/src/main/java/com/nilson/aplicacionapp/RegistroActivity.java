@@ -2,6 +2,7 @@ package com.nilson.aplicacionapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -256,17 +257,25 @@ public class RegistroActivity extends AppCompatActivity {
              Toast.makeText(RegistroActivity.this,"Nombre Completo : "+nombre+" "+apellido+"\nCorreo : "+correo+"\n Genero : "+genero+"\n Compañia : "+entel+" "+claro+" "+movistar+"\nMarca :  "+selectspin+"\nVotacion : "+ratin,Toast.LENGTH_LONG).show();
 
 
-             ArrayList<String> datos = new ArrayList<>();
 
-             datos.add(nombre);
-             datos.add(apellido);
-             datos.add(correo);
-             datos.add(genero);
-             datos.add(entel);
-             datos.add(claro);
-             datos.add(movistar);
-             datos.add(selectspin);
-             datos.add(ratin);
+
+
+
+
+             ArrayList<String> datosformulario = new ArrayList<>();
+
+             datosformulario.add(nombre);
+             datosformulario.add(apellido);
+             datosformulario.add(correo);
+             datosformulario.add(genero);
+             datosformulario.add(entel);
+             datosformulario.add(claro);
+             datosformulario.add(movistar);
+             datosformulario.add(selectspin);
+             datosformulario.add(ratin);
+
+
+           // VerActivity ver = new VerActivity();
 
             limpiar();
 
