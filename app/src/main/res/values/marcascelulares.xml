@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Marca_Smartphone">
-
+        <item>Seleccionar item</item>
         <item>Iphone</item>
         <item>Samsung</item>
         <item>Huawei</item>

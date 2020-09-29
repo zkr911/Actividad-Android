@@ -35,8 +35,9 @@ public class RegistroActivity extends AppCompatActivity {
     Button btnok;
     String[] items;
     private boolean isFirsTime = true;
-
-
+    String entel;
+    String claro;
+    String movistar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,7 +144,7 @@ public class RegistroActivity extends AppCompatActivity {
          @Override
          public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-             if(charSequence.length() < 3){
+             if(charSequence.length() < 8){
                  txtcorreo.setError("El apellido es muy corto");
                  if(charSequence.length()==0){
                      txtcorreo.setError(null);
@@ -224,22 +225,38 @@ public class RegistroActivity extends AppCompatActivity {
 
 
             boolean check1 = cbentel.isChecked();
-            String entel = Boolean.valueOf(check1).toString();
+                if(check1 == false){
+                     entel = "";
+                }else {
+                     entel = "Entel";
+                }
+
 
             boolean check2 = cbclaro.isChecked();
-            String claro = Boolean.valueOf(check2).toString();
+                if(check2 ==false){
+                    claro = "";
+                }else{
+                    claro = "Claro";
+                }
+
 
             boolean check3 = cbmovistar.isChecked();
-            String movistar = Boolean.valueOf(check3).toString();
+                if(check3 == false){
+                    movistar = "";
+                }else{
+                    movistar ="Movistar";
+                }
+
+
 
 
             Spinner myspin = (Spinner)findViewById(R.id.spinnerxml);
             String selectspin = myspin.getSelectedItem().toString();
 
-             Toast.makeText(RegistroActivity.this,"---> "+ratin+"------>"+check2+"----->"+check3,Toast.LENGTH_LONG).show();
+             Toast.makeText(RegistroActivity.this,"Nombre Completo : "+nombre+" "+apellido+"\nCorreo : "+correo+"\n Genero : "+genero+"\n Compañia : "+entel+" "+claro+" "+movistar+"\nMarca :  "+selectspin+"\nVotacion : "+ratin,Toast.LENGTH_LONG).show();
 
 
-             ArrayList<String> datos=new ArrayList<>();
+             ArrayList<String> datos = new ArrayList<>();
 
              datos.add(nombre);
              datos.add(apellido);
@@ -251,10 +268,42 @@ public class RegistroActivity extends AppCompatActivity {
              datos.add(selectspin);
              datos.add(ratin);
 
+            limpiar();
 
          }
      });
 
+    }
+
+
+    public void limpiar(){
+
+        txtnombre.setText(null);
+        txtapellido.setEnabled(false);
+        txtapellido.setText(null);
+        txtcorreo.setEnabled(false);
+        txtcorreo.setText(null);
+
+        radioGroup.setEnabled(false);
+        rbfemenino.setEnabled(false);
+        rbmasculino.setEnabled(false);
+
+
+
+        spinnerxml.setEnabled(false);
+        spinnerxml.setAdapter(null);
+
+        cbclaro.setEnabled(false);
+        cbclaro.setChecked(false);
+        cbmovistar.setEnabled(false);
+        cbmovistar.setChecked(false);
+        cbentel.setEnabled(false);
+        cbentel.setChecked(false);
+
+        ratingBar.setEnabled(false);
+        ratingBar.setRating(0);
+
+        btnok.setEnabled(false);
 
     }
 }
