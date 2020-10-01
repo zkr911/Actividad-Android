@@ -39,6 +39,10 @@ public class RegistroActivity extends AppCompatActivity {
     String entel;
     String claro;
     String movistar;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,8 @@ public class RegistroActivity extends AppCompatActivity {
         cbentel=findViewById(R.id.cbentel);
         cbclaro=findViewById(R.id.cbclaro);
         cbmovistar=findViewById(R.id.cbmovistar);
+
+
 
         btnok=findViewById(R.id.btnok);
         ratingBar=findViewById(R.id.ratingBar);
@@ -146,7 +152,7 @@ public class RegistroActivity extends AppCompatActivity {
          public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
              if(charSequence.length() < 8){
-                 txtcorreo.setError("El apellido es muy corto");
+                 txtcorreo.setError("El correo es muy corto");
                  if(charSequence.length()==0){
                      txtcorreo.setError(null);
                  }
@@ -204,12 +210,14 @@ public class RegistroActivity extends AppCompatActivity {
      });
 
 
-
+//boton enviar datos
      btnok.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
 
              String nombre = txtnombre.getText().toString();
+
+
              String apellido = txtapellido.getText().toString();
              String correo = txtcorreo.getText().toString();
 
@@ -250,34 +258,16 @@ public class RegistroActivity extends AppCompatActivity {
 
 
 
-
-            Spinner myspin = (Spinner)findViewById(R.id.spinnerxml);
-            String selectspin = myspin.getSelectedItem().toString();
+            String selectspin = spinnerxml.getSelectedItem().toString();
 
              Toast.makeText(RegistroActivity.this,"Nombre Completo : "+nombre+" "+apellido+"\nCorreo : "+correo+"\n Genero : "+genero+"\n Compañia : "+entel+" "+claro+" "+movistar+"\nMarca :  "+selectspin+"\nVotacion : "+ratin,Toast.LENGTH_LONG).show();
 
+             datoarray.datoarray.add(new infodatos(nombre,apellido,correo,entel,claro,movistar,selectspin,ratin));
+
+            Intent intento = new Intent(RegistroActivity.this,MainActivity.class);
+            startActivity(intento);
 
 
-
-
-
-
-             ArrayList<String> datosformulario = new ArrayList<>();
-
-             datosformulario.add(nombre);
-             datosformulario.add(apellido);
-             datosformulario.add(correo);
-             datosformulario.add(genero);
-             datosformulario.add(entel);
-             datosformulario.add(claro);
-             datosformulario.add(movistar);
-             datosformulario.add(selectspin);
-             datosformulario.add(ratin);
-
-
-           // VerActivity ver = new VerActivity();
-
-            limpiar();
 
          }
      });
@@ -285,34 +275,7 @@ public class RegistroActivity extends AppCompatActivity {
     }
 
 
-    public void limpiar(){
-
-        txtnombre.setText(null);
-        txtapellido.setEnabled(false);
-        txtapellido.setText(null);
-        txtcorreo.setEnabled(false);
-        txtcorreo.setText(null);
-
-        radioGroup.setEnabled(false);
-        rbfemenino.setEnabled(false);
-        rbmasculino.setEnabled(false);
 
 
 
-        spinnerxml.setEnabled(false);
-        spinnerxml.setAdapter(null);
-
-        cbclaro.setEnabled(false);
-        cbclaro.setChecked(false);
-        cbmovistar.setEnabled(false);
-        cbmovistar.setChecked(false);
-        cbentel.setEnabled(false);
-        cbentel.setChecked(false);
-
-        ratingBar.setEnabled(false);
-        ratingBar.setRating(0);
-
-        btnok.setEnabled(false);
-
-    }
 }

@@ -31,17 +31,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="141dp"
-                android:layout_height="127dp"
-                android:layout_marginStart="132dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logocelular" />
-
-
             <EditText
                 android:id="@+id/txtnombre"
                 android:layout_width="wrap_content"
@@ -173,10 +162,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
-
-
-
-
             <RatingBar
                 android:id="@+id/ratingBar"
                 android:layout_width="wrap_content"
@@ -196,8 +181,6 @@
                 android:text="OK"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
-
-
 
 
         </LinearLayout>

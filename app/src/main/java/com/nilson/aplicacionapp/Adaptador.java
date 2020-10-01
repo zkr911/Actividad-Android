@@ -8,74 +8,81 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 
-public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolderDatos> {
+public class Adaptador extends RecyclerView.Adapter<Adaptador.MyViewHolderinfodatos> {
 
 
-    ArrayList<String> lista_datos;
+    ArrayList<infodatos> Datoscliente;
 
-    public Adaptador(ArrayList<String> lista_datos) {
-        this.lista_datos = lista_datos;
+    public Adaptador(ArrayList<infodatos> datoscliente) {
+       this.Datoscliente = datoscliente;
     }
+
 
     @NonNull
     @Override
-    public Adaptador.ViewHolderDatos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_modelo_ver,null,false);
-        return new ViewHolderDatos(view);
+    public Adaptador.MyViewHolderinfodatos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_modelo_ver,parent,false);
+        return new MyViewHolderinfodatos(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adaptador.ViewHolderDatos holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolderinfodatos holder, int position) {
 
-        holder.cargardatos(lista_datos.get(position));
+        infodatos infodatos = Datoscliente.get(position);
+        holder.txtnombre.setText(infodatos.nombre);
+        holder.textoapellido.setText(infodatos.apellido);
+        holder.textocorreo.setText(infodatos.correo);
+
+
+       // holder.textogenero.setText(infodatos.genero);
+        holder.textoentel.setText(infodatos.entel);
+        holder.textoclaro.setText(infodatos.claro);
+        holder.textomovistar.setText(infodatos.movistar);
+        holder.textospin.setText(infodatos.selecspin);
+        holder.textoratin.setText(infodatos.ratin);
+
     }
 
     @Override
     public int getItemCount() {
-        return lista_datos.size();
+        return Datoscliente.size();
     }
 
-    public class ViewHolderDatos extends RecyclerView.ViewHolder {
+    public class MyViewHolderinfodatos extends RecyclerView.ViewHolder {
 
-        TextView textonombre;
+        TextView txtnombre;
         TextView textoapellido;
         TextView textocorreo;
-        TextView textogenero;
+
+       // TextView textogenero;
         TextView textoentel;
         TextView textoclaro;
         TextView textomovistar;
         TextView textospin;
         TextView textoratin;
 
-        public ViewHolderDatos(@NonNull View itemView) {
+
+
+        public MyViewHolderinfodatos(@NonNull View itemView) {
             super(itemView);
-            textonombre = itemView.findViewById(R.id.textonombre);
-            textoapellido = itemView.findViewById(R.id.textoapellido);
-            textocorreo = itemView.findViewById(R.id.textocorreo);
-            textogenero = itemView.findViewById(R.id.textogenero);
-            textoentel = itemView.findViewById(R.id.textoentel);
-            textoclaro = itemView.findViewById(R.id.textoclaro);
-            textomovistar = itemView.findViewById(R.id.textomovistar);
-            textospin = itemView.findViewById(R.id.textospin);
-            textoratin = itemView.findViewById(R.id.textoratin);
 
-        }
+            txtnombre = itemView.findViewById(R.id.txtnombre);
+
+            textoapellido = itemView.findViewById(R.id.txtapellido);
+            textocorreo = itemView.findViewById(R.id.txtcorreo);
 
 
-        public void cargardatos(String s){
+           // textogenero = itemView.findViewById(R.id.rbfemenino);
+           // textogenero = itemView.findViewById(R.id.rbmasculino);
 
-            textonombre.setText(s);
-            textoapellido.setText(s);
-            textocorreo.setText(s);
-            textogenero.setText(s);
-            textoentel.setText(s);
-            textoclaro.setText(s);
-            textomovistar.setText(s);
-            textospin.setText(s);
-            textoratin.setText(s);
+            textoentel = itemView.findViewById(R.id.cbentel);
+            textoclaro = itemView.findViewById(R.id.cbclaro);
+            textomovistar = itemView.findViewById(R.id.cbmovistar);
+            textospin = itemView.findViewById(R.id.spinnerxml);
+            textoratin = itemView.findViewById(R.id.ratingBar);
         }
     }
 }
