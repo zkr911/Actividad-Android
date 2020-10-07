@@ -18,27 +18,24 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
-
 public class RegistroActivity extends AppCompatActivity {
 
 
-    Spinner spinnerxml;
-    EditText txtnombre;
-    EditText txtapellido;
-    RadioGroup radioGroup;
-    RadioButton rbmasculino;
-    RadioButton rbfemenino;
-    EditText txtcorreo;
-    CheckBox cbentel,cbmovistar,cbclaro;
-    RatingBar ratingBar;
-    Button btnok;
-    String[] items;
+    private Spinner spinnerxml;
+    private EditText txtnombre;
+    private EditText txtapellido;
+    private RadioGroup radioGroup;
+    private RadioButton rbmasculino;
+    private RadioButton rbfemenino;
+    private EditText txtcorreo;
+    private CheckBox cbentel,cbmovistar,cbclaro;
+    private RatingBar ratingBar;
+    private Button btnok;
+    private String[] items;
     private boolean isFirsTime = true;
-    String entel;
-    String claro;
-    String movistar;
+    private String entel;
+    private String claro;
+    private String movistar;
 
 
 
@@ -48,22 +45,22 @@ public class RegistroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        txtnombre =findViewById(R.id.txtnombre);
-        txtapellido=findViewById(R.id.txtapellido);
-        txtcorreo=findViewById(R.id.txtcorreo);
+        txtnombre =findViewById(R.id.txtnom);
+        txtapellido=findViewById(R.id.txtape);
+        txtcorreo=findViewById(R.id.txtmail);
         radioGroup=findViewById(R.id.radioGroup);
 
         cbentel=findViewById(R.id.cbentel);
-        cbclaro=findViewById(R.id.cbclaro);
-        cbmovistar=findViewById(R.id.cbmovistar);
+        cbclaro=findViewById(R.id.chekclaro);
+        cbmovistar=findViewById(R.id.chekmovistar);
 
 
 
         btnok=findViewById(R.id.btnok);
-        ratingBar=findViewById(R.id.ratingBar);
-        spinnerxml = findViewById(R.id.spinnerxml);
+        ratingBar=findViewById(R.id.ratinkin);
+        spinnerxml = findViewById(R.id.selecspiner);
         rbmasculino = findViewById(R.id.rbmasculino);
-        rbfemenino = findViewById(R.id.rbfemenino);
+        rbfemenino = findViewById(R.id.radiofemenino);
         items = getResources().getStringArray(R.array.Marca_Smartphone);
 
         ArrayAdapter<CharSequence> Celulares = ArrayAdapter.createFromResource(RegistroActivity.this,R.array.Marca_Smartphone,android.R.layout.simple_spinner_item);
@@ -262,7 +259,15 @@ public class RegistroActivity extends AppCompatActivity {
 
              Toast.makeText(RegistroActivity.this,"Nombre Completo : "+nombre+" "+apellido+"\nCorreo : "+correo+"\n Genero : "+genero+"\n Compañia : "+entel+" "+claro+" "+movistar+"\nMarca :  "+selectspin+"\nVotacion : "+ratin,Toast.LENGTH_LONG).show();
 
-             datoarray.datoarray.add(new infodatos(nombre,apellido,correo,entel,claro,movistar,selectspin,ratin));
+
+
+             //datoarray.datoarray.add(new infodatos(nombre,apellido,correo,entel,claro,movistar,selectspin,ratin));
+
+
+             infodatos datoscompleto = new infodatos(nombre,apellido,correo,entel,claro,movistar,selectspin,ratin);
+
+             MainActivity.Arraydatos.add(datoscompleto);
+
 
             Intent intento = new Intent(RegistroActivity.this,MainActivity.class);
             startActivity(intento);

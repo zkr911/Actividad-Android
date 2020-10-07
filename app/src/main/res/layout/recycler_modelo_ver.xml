@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/txtnombre"
+        android:id="@+id/txtnom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -20,93 +20,93 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtapellido"
+        android:id="@+id/txtape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/txtnombre"
+        app:layout_constraintStart_toEndOf="@+id/txtnom"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtcorreo"
+        android:id="@+id/txtmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="7dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnombre" />
+        app:layout_constraintTop_toBottomOf="@+id/txtnom" />
 
     <TextView
-        android:id="@+id/rbfemenino"
+        android:id="@+id/radiofemenino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtmail" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/radiomasculino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/rbfemenino"
-        app:layout_constraintTop_toBottomOf="@+id/txtapellido" />
+        app:layout_constraintStart_toEndOf="@+id/radiofemenino"
+        app:layout_constraintTop_toBottomOf="@+id/txtape" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/chekentel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbfemenino" />
+        app:layout_constraintTop_toBottomOf="@+id/radiofemenino" />
 
     <TextView
-        android:id="@+id/cbclaro"
+        android:id="@+id/chekclaro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toEndOf="@+id/chekentel"
+        app:layout_constraintTop_toBottomOf="@+id/radiomasculino" />
 
     <TextView
-        android:id="@+id/cbmovistar"
+        android:id="@+id/chekmovistar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/cbclaro"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toEndOf="@+id/chekclaro"
+        app:layout_constraintTop_toBottomOf="@+id/radiomasculino" />
 
     <TextView
-        android:id="@+id/spinnerxml"
+        android:id="@+id/selecspiner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/chekentel" />
 
     <TextView
-        android:id="@+id/ratingBar"
+        android:id="@+id/ratinkin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerxml" />
+        app:layout_constraintTop_toBottomOf="@+id/selecspiner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

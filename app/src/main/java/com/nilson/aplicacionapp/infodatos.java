@@ -3,12 +3,25 @@ package com.nilson.aplicacionapp;
 public class infodatos {
 
     String nombre, apellido,correo,ratin,entel,claro,movistar,selecspin;
+    String genero;
 
-    public infodatos(String nombre, String apellido, String correo,  String ratin, String entel, String claro, String movistar, String selecspin) {
+    public infodatos(String genero) {
+        this.genero = genero;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public infodatos(String nombre, String apellido, String correo, String ratin, String entel, String claro, String movistar, String selecspin) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-       // this.genero = genero;
+
         this.ratin = ratin;
         this.entel = entel;
         this.claro = claro;
@@ -40,13 +53,7 @@ public class infodatos {
         this.correo = correo;
     }
 
-   /* public String getGenero() {
-        return genero;
-    }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }*/
 
     public String getRatin() {
         return ratin;

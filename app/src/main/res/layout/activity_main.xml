@@ -35,5 +35,5 @@
         android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprincipal" />
+         />
 </androidx.constraintlayout.widget.ConstraintLayout>

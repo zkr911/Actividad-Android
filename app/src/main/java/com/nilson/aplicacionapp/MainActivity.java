@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
 
 
     private Button btnver,btngenerar;
+
+
+    public static ArrayList<infodatos> Arraydatos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
